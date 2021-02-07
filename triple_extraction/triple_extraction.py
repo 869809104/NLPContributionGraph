@@ -133,7 +133,6 @@ print(all_spans)
 for i, article_catalogue in enumerate(catalogues):
     article_spans = all_spans[i]
 
-    # 已解决
     with open(os.path.join('./evaluation-phase2/' + article_catalogue, 'triples/research-problem.txt'), 'w', encoding='utf-8') as f:
         for j in range(len(article_spans)):
             f.write('(Contribution||has research problem||' + article_spans[j] + ')\n')
@@ -144,14 +143,12 @@ for i, article_catalogue in enumerate(catalogues):
             f.write('(Approach||has||' + article_spans[j] + ')\n')
             f.write('(' + article_spans[j] + '||' + article_spans[j+1] + '||' + article_spans[j+2] + ')\n')
 
-    # 已解决
     with open(os.path.join('./evaluation-phase2/' + article_catalogue, 'triples/model.txt'), 'w', encoding='utf-8') as f:
         f.write('(Contribution||has||Model)' + '\n')
         f.write('(Model||' + article_spans[0] + '||' + article_spans[1] + ')\n')
         for j in range(2, len(article_spans) - 1):
             f.write('(' + article_spans[j-1] + '||' + article_spans[j] + '||' + article_spans[j+1] + ')\n')
 
-    # 已解决
     with open(os.path.join('./evaluation-phase2/' + article_catalogue, 'triples/code.txt'), 'w', encoding='utf-8') as f:
         for j in range(len(article_spans)):
             f.write('(Contribution||Code||' + article_spans[j] + ')\n')
@@ -179,8 +176,6 @@ for i, article_catalogue in enumerate(catalogues):
         for j in range(len(article_spans) - 3):
             f.write('(Results||' + article_spans[j] + '||' + article_spans[j + 1] + ')\n')
             f.write('(' + article_spans[j + 1] + '||' + article_spans[j + 2] + '||' + article_spans[j + 3] + ')\n')
-
-    # 已解决
     with open(os.path.join('./evaluation-phase2/' + article_catalogue, 'triples/tasks.txt'), 'w', encoding='utf-8') as f:
         f.write('(Contribution||has||Tasks)' + '\n')
         for j in range(len(article_spans) - 2):
