@@ -117,7 +117,6 @@ for article_index, article_spans in enumerate(contribution_spans):
     article_catalogue = catalogues[article_index]
     # print(article_spans)
 
-    # 已解决
     with open(os.path.join('./evaluation-phase2/' + article_catalogue, 'triples/research-problem.txt'), 'w',
               encoding='utf-8') as f:
         for sentence_index, sentence_spans in enumerate(article_spans):
@@ -127,7 +126,6 @@ for article_index, article_spans in enumerate(contribution_spans):
                 # print('(Contribution||has research problem||' + spans + ')')
                 f.write('(Contribution||has research problem||' + spans + ')\n')
 
-    # 已解决
     with open(os.path.join('./evaluation-phase2/' + article_catalogue, 'triples/approach.txt'), 'w',
               encoding='utf-8') as f:
         # print('(Contribution||has||Approach)')
@@ -142,7 +140,6 @@ for article_index, article_spans in enumerate(contribution_spans):
                     f.write('(' + sentence_spans[start] + '||' + sentence_spans[start + 1] + '||' + sentence_spans[start + 2] + ')\n')
                     start += 2
 
-    # 1/2概率
     with open(os.path.join('./evaluation-phase2/' + article_catalogue, 'triples/model.txt'), 'w',
               encoding='utf-8') as f:
         # print('(Contribution||has||Model)')
@@ -165,7 +162,6 @@ for article_index, article_spans in enumerate(contribution_spans):
                 f.write('(' + sentence_spans[start] + '||' + sentence_spans[start + 1] + '||' + sentence_spans[start + 2] + ')\n')
                 start += 2
 
-    # 已解决
     with open(os.path.join('./evaluation-phase2/' + article_catalogue, 'triples/code.txt'), 'w', encoding='utf-8') as f:
         for sentence_index, sentence_spans in enumerate(article_spans):
             # print(sentence_spans)
@@ -174,7 +170,6 @@ for article_index, article_spans in enumerate(contribution_spans):
                 # print('(Contribution||Code||' + spans + ')')
                 f.write('(Contribution||Code||' + spans + ')\n')
 
-    # 未解决
     with open(os.path.join('./evaluation-phase2/' + article_catalogue, 'triples/experimental-setup.txt'), 'w', encoding='utf-8') as f:
         # print('(Contribution||has||Experimental setup)')
         f.write('(Contribution||has||Experimental setup)\n')
@@ -196,7 +191,6 @@ for article_index, article_spans in enumerate(contribution_spans):
                 f.write('(' + sentence_spans[start] + '||' + sentence_spans[start + 1] + '||' + sentence_spans[start + 2] + ')\n')
                 start += 2
 
-    # 未解决
     with open(os.path.join('./evaluation-phase2/' + article_catalogue, 'triples/hyperparameters.txt'), 'w',
                   encoding='utf-8') as f:
         # print('(Contribution||has||Hyperparameters)')
@@ -219,7 +213,6 @@ for article_index, article_spans in enumerate(contribution_spans):
                 f.write('(' + sentence_spans[start] + '||' + sentence_spans[start + 1] + '||' + sentence_spans[start + 2] + ')\n')
                 start += 2
 
-    # 已解决
     with open(os.path.join('./evaluation-phase2/' + article_catalogue, 'triples/baselines.txt'), 'w',
                 encoding='utf-8') as f:
         # print('(Contribution||has||Baselines)')
@@ -243,7 +236,6 @@ for article_index, article_spans in enumerate(contribution_spans):
                 f.write('(' + sentence_spans[start] + '||' + sentence_spans[start + 1] + '||' + sentence_spans[start + 2] + ')\n')
                 start += 2
 
-    # 半解决
     with open(os.path.join('./evaluation-phase2/' + article_catalogue, 'triples/results.txt'), 'w', encoding='utf-8') as f:
         # print('(Contribution||has||Results)')
         f.write('(Contribution||has||Results)\n')
@@ -265,7 +257,6 @@ for article_index, article_spans in enumerate(contribution_spans):
                 f.write('(' + sentence_spans[start] + '||' + sentence_spans[start + 1] + '||' + sentence_spans[start + 2] + ')\n')
                 start += 2
 
-    # 半解决
     with open(os.path.join('./evaluation-phase2/' + article_catalogue, 'triples/tasks.txt'), 'w', encoding='utf-8') as f:
         # print('(Contribution||has||Tasks)')
         f.write('(Contribution||has||Tasks)\n')
@@ -286,7 +277,6 @@ for article_index, article_spans in enumerate(contribution_spans):
                 # print('(' + sentence_spans[start] + '||' + sentence_spans[start + 1] + '||' + sentence_spans[start + 2] + ')')
                 f.write('(' + sentence_spans[start] + '||' + sentence_spans[start + 1] + '||' + sentence_spans[start + 2] + ')\n')
                 start += 2
-    # 未解决
     with open(os.path.join('./evaluation-phase2/' + article_catalogue, 'triples/experiments.txt'), 'w', encoding='utf-8') as f:
         # print('(Contribution||has||Experiments)')
         f.write('(Contribution||has||Experiments)\n')
@@ -307,8 +297,7 @@ for article_index, article_spans in enumerate(contribution_spans):
                 # print('(' + sentence_spans[start] + '||' + sentence_spans[start + 1] + '||' + sentence_spans[start + 2] + ')')
                 f.write('(' + sentence_spans[start] + '||' + sentence_spans[start + 1] + '||' + sentence_spans[start + 2] + ')\n')
                 start += 2
-
-    # 未解决
+    
     with open(os.path.join('./evaluation-phase2/' + article_catalogue, 'triples/ablation-analysis.txt'), 'w', encoding='utf-8') as f:
         # print('(Contribution||has||Ablation analysis)')
         f.write('(Contribution||has||Ablation analysis)\n')
